@@ -6,10 +6,10 @@ window.addEventListener('pointermove', ({ clientX, clientY }) => {
   const x = (clientX / window.innerWidth - .5) * 8;
   const y = (clientY / window.innerHeight - .5) * 5;
   heroCopy.style.transform = `translate(${-x * .35}px, calc(-50% + ${-y * .35}px))`;
-  character.style.transform = `translate(${x}px, ${y}px)`;
+  character.style.transform = window.innerWidth >= 1440 ? 'none' : `translate(${x}px, ${y}px)`;
 });
 
-const fadeTargets = document.querySelectorAll('.news article, .date, .cta > *:not(.sigil)');
+const fadeTargets = document.querySelectorAll('.news article, .cta > *:not(.sigil)');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('shown');

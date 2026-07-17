@@ -98,10 +98,6 @@ a {
     filter: drop-shadow(0 0 32px rgba(111,55,163,.4))
 }
 
-.character-wrap:after {
-    display: none
-}
-
 header {
     position: relative;
     z-index: 8;
@@ -110,7 +106,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(255,255,255,.12)
+    /* border-bottom: 1px solid rgba(255,255,255,.12); */
 }
 
 .brand {
@@ -154,7 +150,7 @@ header {
 nav {
     display: flex;
     gap: 42px;
-    font: 600 10px Montserrat;
+    font: 600 16px Montserrat;
     letter-spacing: .15em
 }
 
@@ -177,7 +173,7 @@ nav a:hover {
 .overline,.label,.cta>p {
     text-transform: uppercase;
     letter-spacing: .3em;
-    font-size: 9px;
+    font-size: 14px;
     color: var(--green);
     font-weight: 700
 }
@@ -206,46 +202,6 @@ nav a:hover {
     margin: 30px 0 0 5px
 }
 
-.side-note {
-    position: absolute;
-    z-index: 5;
-    right: 5vw;
-    top: 130px;
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    border-left: 1px solid var(--green);
-    padding-left: 14px
-}
-
-.side-note span {
-    font: 600 38px 'Cormorant Garamond'
-}
-
-.side-note small {
-    font-size: 8px;
-    line-height: 1.5;
-    color: #a69dab;
-    letter-spacing: .15em
-}
-
-.scroll {
-    position: absolute;
-    z-index: 5;
-    left: 7vw;
-    bottom: 40px;
-    font-size: 8px;
-    letter-spacing: .18em;
-    color: #8b838e
-}
-
-.scroll i {
-    font-style: normal;
-    color: var(--green);
-    font-size: 18px;
-    margin-left: 15px
-}
-
 .news {
     min-height: 620px;
     position: relative;
@@ -256,23 +212,6 @@ nav a:hover {
     align-items: start;
     background: radial-gradient(circle at 20% 80%,rgba(66,30,92,.2),transparent 35%),#09080b;
     border-top: 1px solid #211b25
-}
-
-.date {
-    border-top: 1px solid #41364a;
-    padding-top: 22px
-}
-
-.date span {
-    display: block;
-    font: 600 42px 'Cormorant Garamond';
-    color: #b292d5
-}
-
-.date b {
-    font-size: 11px;
-    letter-spacing: .35em;
-    color: #62596a
 }
 
 .news article {
@@ -474,22 +413,9 @@ footer {
         opacity: .72
     }
 
-    .side-note {
-        top: 105px
-    }
-
-    .scroll {
-        display: none
-    }
-
     .news {
         padding: 90px 7vw;
         display: block
-    }
-
-    .date {
-        width: 120px;
-        margin-bottom: 50px
     }
 
     .news h3 {
@@ -588,6 +514,58 @@ footer {
 
     .character-wrap img {
         object-position: center center
+    }
+}
+
+@media(min-width: 801px) {
+    .hero .character-wrap {
+        top: 100px;
+        right: -7%;
+        bottom: 0;
+        width: min(65vw,1200px);
+        height: auto;
+        overflow: hidden;
+        align-items: flex-start
+    }
+
+    .hero .character-wrap img {
+        width: 100%;
+        height: auto;
+        max-width: none;
+        object-fit: initial;
+        object-position: initial;
+        margin-top: -3%
+    }
+}
+
+/*
+ * Hero artwork alignment, 1440px and wider.
+ * At 2560px the visible (non-transparent) pixels occupy x=1340..2469.
+ */
+@media(min-width: 1440px) {
+    .hero {
+        --hero-art-left: 49.61vw;
+        --hero-art-width: 50.84vw;
+        --hero-art-top: calc(72px - 1.39vw)
+    }
+
+    .hero .character-wrap {
+        left: var(--hero-art-left);
+        right: auto;
+        top: var(--hero-art-top);
+        bottom: auto;
+        width: var(--hero-art-width);
+        height: auto;
+        overflow: visible;
+        transform: none !important
+    }
+
+    .hero .character-wrap img {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        position: relative;
+        left: -229px;
     }
 }
 
@@ -734,13 +712,6 @@ footer {
         padding-right: 7vw
     }
 
-    .news .date {
-        position: absolute;
-        top: 42px;
-        right: 7vw;
-        width: 105px
-    }
-
     .news article {
         grid-column: 2;
         max-width: none
@@ -765,7 +736,7 @@ footer {
         background: linear-gradient(0deg,#050406 30%,transparent 60%)
     }
 
-    .glow,.hero-copy,.side-note,.scroll,header nav {display:none}
+    .glow,.hero-copy,header nav {display:none}
 
     .hero header {
         display:flex;
