@@ -10,3 +10,4 @@
   .character-wrap img{object-position:center center}
 }
 .news h3 span{color:var(--green);font:inherit;font-style:normal}
+.body-copy p{margin:0}.body-copy p+p{margin-top:1.35em}
