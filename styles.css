@@ -1,39 +1,825 @@
-:root{--black:#050406;--white:#f3eef7;--violet:#8e61d1;--purple:#3c185d;--green:#9eff45;--muted:#aaa1b2}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--white);font-family:Montserrat,Arial,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}.grain{position:fixed;inset:0;z-index:30;pointer-events:none;opacity:.055;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}.hero{min-height:820px;height:100vh;position:relative;overflow:hidden;background:radial-gradient(circle at 65% 43%,#2e1745 0,transparent 28%),radial-gradient(circle at 50% 100%,#182312 0,transparent 35%),#050406}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#050406 0%,transparent 38%,transparent 75%,#050406 100%),linear-gradient(0deg,#050406 0%,transparent 25%);z-index:2;pointer-events:none}.glow{position:absolute;border-radius:50%;filter:blur(100px);opacity:.27}.glow-violet{width:520px;height:520px;background:#7e3bce;left:42%;top:16%}.glow-green{width:300px;height:300px;background:#63c52c;right:10%;bottom:5%;opacity:.15}.character-wrap{position:absolute;z-index:1;right:1%;bottom:-7%;width:min(68vw,950px);height:99%;display:flex;align-items:flex-end;justify-content:center}.character-wrap img{width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 0 32px rgba(111,55,163,.4))}.character-wrap:after{content:"";position:absolute;inset:55% -10% -5%;background:linear-gradient(0deg,#050406 8%,transparent);pointer-events:none}header{position:relative;z-index:8;height:100px;padding:0 6vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.12)}.brand{display:flex;gap:12px;align-items:center}.brand-mark{width:48px;height:48px;border:1px solid #9470bd;transform:rotate(45deg);display:grid;place-items:center;font:700 19px 'Cormorant Garamond';color:var(--green)}.brand-mark::first-letter{transform:rotate(-45deg)}.brand-name{font:700 20px 'Cormorant Garamond';letter-spacing:.12em}.brand-name small{display:block;font:500 7px Montserrat;color:#877a91;letter-spacing:.2em;margin-top:3px}.brand span>*{transform:none}nav{display:flex;gap:42px;font:600 10px Montserrat;letter-spacing:.15em}nav a{transition:.2s}nav a:hover{color:var(--green)}.hero-copy{position:absolute;z-index:5;left:7vw;top:50%;transform:translateY(-45%)}.overline,.label,.cta>p{text-transform:uppercase;letter-spacing:.3em;font-size:9px;color:var(--green);font-weight:700}.overline:before,.label:before{content:"";display:inline-block;width:32px;height:1px;background:var(--green);vertical-align:middle;margin-right:13px}.hero h1{font:700 clamp(62px,7.3vw,118px)/.73 'Cormorant Garamond',serif;letter-spacing:-.045em;margin:32px 0;color:#f8f4fa;text-shadow:0 6px 28px #000}.hero h2{font:600 italic clamp(26px,2.8vw,42px) 'Cormorant Garamond';color:#b58be7;margin:30px 0 0 5px}.side-note{position:absolute;z-index:5;right:5vw;top:130px;display:flex;align-items:center;gap:11px;border-left:1px solid var(--green);padding-left:14px}.side-note span{font:600 38px 'Cormorant Garamond'}.side-note small{font-size:8px;line-height:1.5;color:#a69dab;letter-spacing:.15em}.scroll{position:absolute;z-index:5;left:7vw;bottom:40px;font-size:8px;letter-spacing:.18em;color:#8b838e}.scroll i{font-style:normal;color:var(--green);font-size:18px;margin-left:15px}.news{min-height:620px;position:relative;padding:120px 12vw;display:grid;grid-template-columns:170px 1fr;gap:7vw;align-items:start;background:radial-gradient(circle at 20% 80%,rgba(66,30,92,.2),transparent 35%),#09080b;border-top:1px solid #211b25}.date{border-top:1px solid #41364a;padding-top:22px}.date span{display:block;font:600 42px 'Cormorant Garamond';color:#b292d5}.date b{font-size:11px;letter-spacing:.35em;color:#62596a}.news article{max-width:890px}.label{color:#887895}.label:before{background:#6b437f}.news h3{font:600 clamp(40px,5vw,78px)/1.02 'Cormorant Garamond';margin:25px 0 45px}.news h3 em{font-style:italic;color:var(--green);font-weight:500}.body-copy{max-width:630px;color:var(--muted);line-height:1.9;font-size:14px;border-left:2px solid #593676;padding-left:24px}.edition{position:absolute;right:4vw;bottom:70px;writing-mode:vertical-rl;color:#4e4753;font-size:8px;letter-spacing:.25em}.cta{min-height:720px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;background:radial-gradient(circle at center,rgba(61,27,88,.55),transparent 38%),radial-gradient(circle at 50% 100%,rgba(76,136,36,.15),transparent 35%),#050406}.sigil{position:absolute;font:700 620px/.8 'Cormorant Garamond';color:transparent;-webkit-text-stroke:1px rgba(154,113,202,.08);transform:translateY(4%);pointer-events:none}.cta>p{position:relative;color:#897a92}.cta h2{position:relative;font:700 clamp(65px,8vw,126px)/.78 'Cormorant Garamond';letter-spacing:-.04em;margin:35px 0 60px}.cta h2 em{color:var(--green);font-style:italic}.fear-button{position:relative;width:min(620px,86vw);height:100px;border:1px solid #77529d;display:flex;align-items:center;justify-content:space-between;padding:0 35px 0 50px;background:linear-gradient(90deg,rgba(89,46,128,.72),rgba(31,18,44,.8));box-shadow:0 0 45px rgba(117,64,163,.2),inset 0 0 25px rgba(146,93,194,.12);font:700 clamp(18px,2vw,27px) 'Cormorant Garamond';letter-spacing:.09em;transition:.25s}.fear-button:before,.fear-button:after{content:"";position:absolute;width:14px;height:14px;border-color:var(--green)}.fear-button:before{left:-1px;top:-1px;border-left:2px solid var(--green);border-top:2px solid var(--green)}.fear-button:after{right:-1px;bottom:-1px;border-right:2px solid var(--green);border-bottom:2px solid var(--green)}.fear-button i{width:52px;height:52px;border:1px solid #776384;border-radius:50%;display:grid;place-items:center;font-style:normal;color:var(--green);transition:.25s}.fear-button:hover{transform:translateY(-4px);border-color:var(--green);box-shadow:0 12px 60px rgba(118,255,58,.12)}.fear-button:hover i{background:var(--green);color:#10120e}footer{height:90px;padding:0 6vw;display:flex;align-items:center;justify-content:space-between;border-top:1px solid #1e1a21;color:#554e5a;font-size:8px;letter-spacing:.2em}
-@media(max-width:800px){.hero{min-height:780px}.hero:after{background:linear-gradient(0deg,#050406 0%,transparent 45%),linear-gradient(90deg,#050406 0%,transparent 85%)}header{height:78px;padding:0 5vw}nav{display:none}.brand-mark{width:39px;height:39px}.hero-copy{left:6vw;top:42%;transform:none}.hero h1{font-size:56px;line-height:.8}.hero h2{font-size:25px}.character-wrap{width:105vw;right:-24%;height:67%;bottom:-3%;opacity:.72}.side-note{top:105px}.scroll{display:none}.news{padding:90px 7vw;display:block}.date{width:120px;margin-bottom:50px}.news h3{font-size:43px}.edition{display:none}.cta{min-height:620px;padding:80px 20px}.cta h2{font-size:62px}.fear-button{height:82px;padding:0 18px 0 25px}.fear-button i{width:42px;height:42px}footer span:nth-child(2){display:none}}
+:root {
+    --black: #050406;
+    --white: #f3eef7;
+    --violet: #8e61d1;
+    --purple: #3c185d;
+    --green: #9eff45;
+    --muted: #aaa1b2
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    background: var(--black);
+    color: var(--white);
+    font-family: Montserrat,Arial,sans-serif;
+    overflow-x: hidden
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.grain {
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    pointer-events: none;
+    opacity: .055;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")
+}
+
+.hero {
+    min-height: 820px;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 65% 43%,#2e1745 0,transparent 28%),radial-gradient(circle at 50% 100%,#182312 0,transparent 35%),#050406
+}
+
+.hero:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,#050406 0%,transparent 38%,transparent 75%,#050406 100%),linear-gradient(0deg,#050406 0%,transparent 25%);
+    z-index: 2;
+    pointer-events: none
+}
+
+.glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: .27
+}
+
+.glow-violet {
+    width: 520px;
+    height: 520px;
+    background: #7e3bce;
+    left: 42%;
+    top: 16%
+}
+
+.glow-green {
+    width: 300px;
+    height: 300px;
+    background: #63c52c;
+    right: 10%;
+    bottom: 5%;
+    opacity: .15
+}
+
+.character-wrap {
+    position: absolute;
+    z-index: 1;
+    right: 1%;
+    bottom: -7%;
+    width: min(68vw,950px);
+    height: 99%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center
+}
+
+.character-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    filter: drop-shadow(0 0 32px rgba(111,55,163,.4))
+}
+
+.character-wrap:after {
+    display: none
+}
+
+header {
+    position: relative;
+    z-index: 8;
+    height: 100px;
+    padding: 0 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,.12)
+}
+
+.brand {
+    display: flex;
+    gap: 12px;
+    align-items: center
+}
+
+.brand-mark {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #9470bd;
+    transform: rotate(45deg);
+    display: grid;
+    place-items: center;
+    font: 700 19px 'Cormorant Garamond';
+    color: var(--green)
+}
+
+.brand-mark::first-letter {
+    transform: rotate(-45deg)
+}
+
+.brand-name {
+    font: 700 20px 'Cormorant Garamond';
+    letter-spacing: .12em
+}
+
+.brand-name small {
+    display: block;
+    font: 500 7px Montserrat;
+    color: #877a91;
+    letter-spacing: .2em;
+    margin-top: 3px
+}
+
+.brand span>* {
+    transform: none
+}
+
+nav {
+    display: flex;
+    gap: 42px;
+    font: 600 10px Montserrat;
+    letter-spacing: .15em
+}
+
+nav a {
+    transition: .2s
+}
+
+nav a:hover {
+    color: var(--green)
+}
+
+.hero-copy {
+    position: absolute;
+    z-index: 5;
+    left: 7vw;
+    top: 50%;
+    transform: translateY(-45%)
+}
+
+.overline,.label,.cta>p {
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    font-size: 9px;
+    color: var(--green);
+    font-weight: 700
+}
+
+.overline:before,.label:before {
+    content: "";
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background: var(--green);
+    vertical-align: middle;
+    margin-right: 13px
+}
+
+.hero h1 {
+    font: 700 clamp(62px,7.3vw,118px)/.73 'Cormorant Garamond',serif;
+    letter-spacing: -.045em;
+    margin: 32px 0;
+    color: #f8f4fa;
+    text-shadow: 0 6px 28px #000
+}
+
+.hero h2 {
+    font: 600 italic clamp(26px,2.8vw,42px) 'Cormorant Garamond';
+    color: #b58be7;
+    margin: 30px 0 0 5px
+}
+
+.side-note {
+    position: absolute;
+    z-index: 5;
+    right: 5vw;
+    top: 130px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    border-left: 1px solid var(--green);
+    padding-left: 14px
+}
+
+.side-note span {
+    font: 600 38px 'Cormorant Garamond'
+}
+
+.side-note small {
+    font-size: 8px;
+    line-height: 1.5;
+    color: #a69dab;
+    letter-spacing: .15em
+}
+
+.scroll {
+    position: absolute;
+    z-index: 5;
+    left: 7vw;
+    bottom: 40px;
+    font-size: 8px;
+    letter-spacing: .18em;
+    color: #8b838e
+}
+
+.scroll i {
+    font-style: normal;
+    color: var(--green);
+    font-size: 18px;
+    margin-left: 15px
+}
+
+.news {
+    min-height: 620px;
+    position: relative;
+    padding: 120px 12vw;
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 7vw;
+    align-items: start;
+    background: radial-gradient(circle at 20% 80%,rgba(66,30,92,.2),transparent 35%),#09080b;
+    border-top: 1px solid #211b25
+}
+
+.date {
+    border-top: 1px solid #41364a;
+    padding-top: 22px
+}
+
+.date span {
+    display: block;
+    font: 600 42px 'Cormorant Garamond';
+    color: #b292d5
+}
+
+.date b {
+    font-size: 11px;
+    letter-spacing: .35em;
+    color: #62596a
+}
+
+.news article {
+    max-width: 890px
+}
+
+.label {
+    color: #887895
+}
+
+.label:before {
+    background: #6b437f
+}
+
+.news h3, .news h4 {
+    font: 600 clamp(40px,5vw,78px)/1.02 'Cormorant Garamond';
+    margin: 25px 0 45px
+}
+
+.news h3 em {
+    font-style: italic;
+    color: var(--green);
+    font-weight: 500
+}
+
+.body-copy {
+    max-width: 630px;
+    color: var(--muted);
+    line-height: 1.9;
+    font-size: 14px;
+    border-left: 2px solid #593676;
+    padding-left: 24px
+}
+
+.edition {
+    position: absolute;
+    right: 4vw;
+    bottom: 70px;
+    writing-mode: vertical-rl;
+    color: #4e4753;
+    font-size: 8px;
+    letter-spacing: .25em
+}
+
+.cta {
+    min-height: 720px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at center,rgba(61,27,88,.55),transparent 38%),radial-gradient(circle at 50% 100%,rgba(76,136,36,.15),transparent 35%),#050406
+}
+
+.sigil {
+    position: absolute;
+    font: 700 620px/.8 'Cormorant Garamond';
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(154,113,202,.08);
+    transform: translateY(4%);
+    pointer-events: none
+}
+
+.cta>p {
+    position: relative;
+    color: #897a92
+}
+
+.cta h2 {
+    position: relative;
+    font: 700 clamp(65px,8vw,126px)/.78 'Cormorant Garamond';
+    letter-spacing: -.04em;
+    margin: 35px 0 60px
+}
+
+.cta h2 em {
+    color: var(--green);
+    font-style: italic
+}
+
+.fear-button {
+    position: relative;
+    width: min(620px,86vw);
+    height: 100px;
+    border: 1px solid #77529d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px 0 50px;
+    background: linear-gradient(90deg,rgba(89,46,128,.72),rgba(31,18,44,.8));
+    box-shadow: 0 0 45px rgba(117,64,163,.2),inset 0 0 25px rgba(146,93,194,.12);
+    font: 700 clamp(18px,2vw,27px) 'Cormorant Garamond';
+    letter-spacing: .09em;
+    transition: .25s
+}
+
+.fear-button:before,.fear-button:after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-color: var(--green)
+}
+
+.fear-button:before {
+    left: -1px;
+    top: -1px;
+    border-left: 2px solid var(--green);
+    border-top: 2px solid var(--green)
+}
+
+.fear-button:after {
+    right: -1px;
+    bottom: -1px;
+    border-right: 2px solid var(--green);
+    border-bottom: 2px solid var(--green)
+}
+
+.fear-button i {
+    width: 52px;
+    height: 52px;
+    border: 1px solid #776384;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-style: normal;
+    color: var(--green);
+    transition: .25s
+}
+
+.fear-button:hover {
+    transform: translateY(-4px);
+    border-color: var(--green);
+    box-shadow: 0 12px 60px rgba(118,255,58,.12)
+}
+
+.fear-button:hover i {
+    background: var(--green);
+    color: #10120e
+}
+
+footer {
+    height: 90px;
+    padding: 0 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #1e1a21;
+    color: #554e5a;
+    font-size: 8px;
+    letter-spacing: .2em
+}
+
+@media(max-width: 800px) {
+    .hero {
+        min-height:780px
+    }
+
+    .hero:after {
+        background: linear-gradient(0deg,#050406 0%,transparent 45%),linear-gradient(90deg,#050406 0%,transparent 85%)
+    }
+
+    header {
+        height: 78px;
+        padding: 0 5vw
+    }
+
+    nav {
+        display: none
+    }
+
+    .brand-mark {
+        width: 39px;
+        height: 39px
+    }
+
+    .hero-copy {
+        left: 6vw;
+        top: 42%;
+        transform: none
+    }
+
+    .hero h1 {
+        font-size: 56px;
+        line-height: .8
+    }
+
+    .hero h2 {
+        font-size: 25px
+    }
+
+    .character-wrap {
+        width: 105vw;
+        right: -24%;
+        height: 67%;
+        bottom: -3%;
+        opacity: .72
+    }
+
+    .side-note {
+        top: 105px
+    }
+
+    .scroll {
+        display: none
+    }
+
+    .news {
+        padding: 90px 7vw;
+        display: block
+    }
+
+    .date {
+        width: 120px;
+        margin-bottom: 50px
+    }
+
+    .news h3 {
+        font-size: 43px
+    }
+
+    .edition {
+        display: none
+    }
+
+    .cta {
+        min-height: 620px;
+        padding: 80px 20px
+    }
+
+    .cta h2 {
+        font-size: 62px
+    }
+
+    .fear-button {
+        height: 82px;
+        padding: 0 18px 0 25px
+    }
+
+    .fear-button i {
+        width: 42px;
+        height: 42px
+    }
+
+    footer span:nth-child(2) {
+        display: none
+    }
+}
+
+.story-date {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr;
+    width: max-content;
+    min-width: 116px;
+    padding: 8px 18px 8px 22px;
+    color: var(--white);
+    border-left: 2px solid var(--green);
+    background: linear-gradient(90deg,rgba(137,255,58,.07),transparent);
+    padding: 16px;
+}
+
+.story-date:before {
+    content: "ДАТА ВЫПУСКА";
+    position: absolute;
+    left: 0;
+    top: -16px;
+    color: #625b68;
+    font: 600 7px Montserrat,sans-serif;
+    letter-spacing: .22em
+}
+
+.story-date span {
+    grid-row: 1/3;
+    align-self: center;
+    margin-right: 12px;
+    font: 600 46px/.75 'Cormorant Garamond',serif;
+    position: relative;
+    top: -5px;
+    /* left: -8px; */
+}
+
+.story-date i,.story-date b {
+    font: 700 9px/1 Montserrat,sans-serif;
+    letter-spacing: .2em
+}
+
+.story-date i {align-self:end;color: #817987;font-style:normal}
+.story-date b {align-self:start;margin-top:5px;color:#817987}
 
 /* Компактная героическая композиция: текст и персонаж на одной оси. */
-@media(min-width:801px){
-  .hero{height:min(100vh,900px);min-height:760px}
-  .hero-copy{top:50%;transform:translateY(-50%)}
-  .character-wrap{top:100px;bottom:0;height:auto;width:min(62vw,900px);align-items:center}
-  .character-wrap img{object-position:center center}
+@media(min-width: 801px) {
+    .hero {
+        height:min(100vh,900px);
+        min-height: 760px
+    }
+
+    .hero-copy {
+        top: 50%;
+        transform: translateY(-50%)
+    }
+
+    .character-wrap {
+        top: 100px;
+        bottom: 0;
+        height: auto;
+        width: min(62vw,900px);
+        align-items: center
+    }
+
+    .character-wrap img {
+        object-position: center center
+    }
 }
-.news h3 span{color:var(--green);font:inherit;font-style:normal}
-.body-copy p{margin:0}.body-copy p+p{margin-top:1.35em}
-.brand img{display:block;width:auto;height:78px;object-fit:contain;filter:drop-shadow(0 0 10px rgba(119,255,64,.12))}
-@media(max-width:800px){.brand img{height:62px}}
+
+.news h3 span {
+    color: var(--green);
+    font: inherit;
+    font-style: normal
+}
+
+.body-copy p {
+    margin: 0
+}
+
+.body-copy p+p {
+    margin-top: 1.35em
+}
+
+.brand img {
+    display: block;
+    width: auto;
+    height: 78px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(119,255,64,.12))
+}
+
+@media(max-width: 800px) {
+    .brand img {
+        height:62px
+    }
+}
 
 /* Тяжёлая фэнтезийная кнопка в духе интерфейса MMORPG. */
-.fear-button{
-  width:min(650px,86vw);
-  height:104px;
-  padding:8px;
-  border:3px solid #09131c;
-  border-radius:5px;
-  background:linear-gradient(180deg,#263947 0%,#07121d 22%,#02070d 78%,#1b2c39 100%);
-  box-shadow:0 0 0 2px #344b5a,0 0 0 5px #03070b,0 10px 22px #000,inset 0 1px 0 #597080;
-  clip-path:polygon(12px 0,calc(100% - 12px) 0,100% 14px,100% calc(100% - 14px),calc(100% - 12px) 100%,12px 100%,0 calc(100% - 14px),0 14px);
+.fear-button {
+    width: min(650px,86vw);
+    height: 104px;
+    padding: 8px;
+    border: 3px solid #09131c;
+    border-radius: 5px;
+    background: linear-gradient(180deg,#263947 0%,#07121d 22%,#02070d 78%,#1b2c39 100%);
+    box-shadow: 0 0 0 2px #344b5a,0 0 0 5px #03070b,0 10px 22px #000,inset 0 1px 0 #597080;
+    clip-path: polygon(12px 0,calc(100% - 12px) 0,100% 14px,100% calc(100% - 14px),calc(100% - 12px) 100%,12px 100%,0 calc(100% - 14px),0 14px);
 }
-.fear-button span{
-  width:100%;height:100%;display:flex;align-items:center;justify-content:center;
-  border:2px solid #b9ff3f;border-radius:3px;
-  background:linear-gradient(180deg,#d2ff56 0%,#94f321 15%,#5ed20b 52%,#39a600 84%,#8ff018 100%);
-  box-shadow:inset 0 2px 0 rgba(255,255,255,.5),inset 0 -5px 12px rgba(10,60,0,.45),0 0 15px rgba(113,255,30,.35);
-  color:#02070d;font:700 clamp(29px,3vw,43px) 'Cormorant Garamond',serif;letter-spacing:.035em;text-shadow:0 1px 0 rgba(255,255,255,.25)
+
+.fear-button span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #b9ff3f;
+    border-radius: 3px;
+    background: linear-gradient(180deg,#d2ff56 0%,#94f321 15%,#5ed20b 52%,#39a600 84%,#8ff018 100%);
+    box-shadow: inset 0 2px 0 rgba(255,255,255,.5),inset 0 -5px 12px rgba(10,60,0,.45),0 0 15px rgba(113,255,30,.35);
+    color: #02070d;
+    font: 700 clamp(29px,3vw,43px) 'Cormorant Garamond',serif;
+    letter-spacing: .035em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.25)
 }
-.fear-button:before,.fear-button:after{display:none}
-.fear-button i{position:absolute;right:23px;width:58px;height:58px;border:3px solid #07111a;background:linear-gradient(180deg,#cbff50,#51c900);color:#02070d;box-shadow:0 0 0 2px #344b5a,0 4px 9px rgba(0,0,0,.65),inset 0 2px 0 rgba(255,255,255,.45);font-size:24px;font-weight:900}
-.fear-button:hover{transform:translateY(-3px);border-color:#142b39;box-shadow:0 0 0 2px #4e6b7c,0 0 0 5px #03070b,0 14px 28px #000,0 0 28px rgba(113,255,30,.3)}
-.fear-button:hover i{background:linear-gradient(180deg,#e0ff76,#72e817);color:#02070d}
-@media(max-width:800px){.fear-button{height:88px;padding:7px}.fear-button span{font-size:28px}}
+
+.fear-button:before,.fear-button:after {
+    display: none
+}
+
+.fear-button i {
+    position: absolute;
+    right: 23px;
+    width: 58px;
+    height: 58px;
+    border: 3px solid #07111a;
+    background: linear-gradient(180deg,#cbff50,#51c900);
+    color: #02070d;
+    box-shadow: 0 0 0 2px #344b5a,0 4px 9px rgba(0,0,0,.65),inset 0 2px 0 rgba(255,255,255,.45);
+    font-size: 24px;
+    font-weight: 900
+}
+
+.fear-button:hover {
+    transform: translateY(-3px);
+    border-color: #142b39;
+    box-shadow: 0 0 0 2px #4e6b7c,0 0 0 5px #03070b,0 14px 28px #000,0 0 28px rgba(113,255,30,.3)
+}
+
+.fear-button:hover i {
+    background: linear-gradient(180deg,#e0ff76,#72e817);
+    color: #02070d
+}
+
+@media(max-width: 800px) {
+    .fear-button {
+        height:88px;
+        padding: 7px
+    }
+
+    .fear-button span {
+        font-size: 28px
+    }
+}
+
+.news h4 {
+    color: var(--green);
+    font-size: 3.2em;
+}
+
+.news article {
+    position: relative;
+    z-index: 2;
+    max-width: min(64%,890px)
+}
+
+.gniless {
+    position: absolute;
+    z-index: 1;
+    right: 3.5%;
+    top: 7%;
+    bottom: 0;
+    width: 38%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    pointer-events: none
+}
+
+.gniless img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    filter: drop-shadow(0 0 24px rgba(110,63,145,.24))
+}
+
+.mobile-quote {display:none}
+
+@media(max-width: 800px) {
+    .news article {max-width: none}
+    .gniless {position:relative;right:auto;top:auto;bottom:auto;width:88%;height:520px;margin:35px auto -90px}
+}
+
+@media(min-width: 801px) {
+    .news {
+        grid-template-columns: minmax(330px,38%) minmax(0,1fr);
+        gap: 5%;
+        padding-left: 7vw;
+        padding-right: 7vw
+    }
+
+    .news .date {
+        position: absolute;
+        top: 42px;
+        right: 7vw;
+        width: 105px
+    }
+
+    .news article {
+        grid-column: 2;
+        max-width: none
+    }
+
+    .gniless {
+        left: 1.5%;
+        right: auto;
+        top: 4%;
+        width: 41%
+    }
+}
+
+@media(max-width: 800px) {
+    .hero {
+        height: 760px;
+        min-height: 760px;
+        background: #050406
+    }
+
+    .hero:after {
+        background: linear-gradient(0deg,#050406 30%,transparent 60%)
+    }
+
+    .glow,.hero-copy,.side-note,.scroll,header nav {display:none}
+
+    .hero header {
+        display:flex;
+        justify-content:center;
+        height:82px;
+        padding:0;
+        border-bottom:0
+    }
+
+    .hero .brand {margin:0 auto}
+    .hero .brand img {height:68px;max-width:88vw}
+
+    .hero .character-wrap {
+        top: 78px;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        width: 100%;
+        height: 410px;
+        opacity: 1;
+        overflow: hidden;
+        align-items: flex-start
+    }
+
+    .hero .character-wrap img {
+        width: 112%;
+        max-width: 520px;
+        height: auto;
+        object-fit: initial;
+        object-position: initial;
+        margin-top: -8px
+    }
+
+    .mobile-quote {
+        display:block;
+        position:absolute;
+        z-index:5;
+        left:7vw;
+        right:7vw;
+        top:475px;
+        padding-top:22px;
+        border-top:1px solid rgba(158,255,69,.35)
+    }
+
+    .mobile-quote blockquote {
+        margin:0;
+        color:#f3eef7;
+        font:600 25px/1.22 'Cormorant Garamond',serif
+    }
+
+    .mobile-quote p {
+        margin:24px 0 0;
+        color:#706b73;
+        font:500 11px/1.5 Montserrat,sans-serif;
+        letter-spacing:.03em
+    }
+}
