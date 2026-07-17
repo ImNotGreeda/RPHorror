@@ -11,3 +11,5 @@
 }
 .news h3 span{color:var(--green);font:inherit;font-style:normal}
 .body-copy p{margin:0}.body-copy p+p{margin-top:1.35em}
+.brand img{display:block;width:auto;height:78px;object-fit:contain;filter:drop-shadow(0 0 10px rgba(119,255,64,.12))}
+@media(max-width:800px){.brand img{height:62px}}
