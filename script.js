@@ -5,7 +5,7 @@ window.addEventListener('pointermove', ({ clientX, clientY }) => {
   if (window.innerWidth < 800) return;
   const x = (clientX / window.innerWidth - .5) * 8;
   const y = (clientY / window.innerHeight - .5) * 5;
-  heroCopy.style.transform = `translate(${-x * .35}px, calc(-45% + ${-y * .35}px))`;
+  heroCopy.style.transform = `translate(${-x * .35}px, calc(-50% + ${-y * .35}px))`;
   character.style.transform = `translate(${x}px, ${y}px)`;
 });
 
