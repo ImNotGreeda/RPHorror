@@ -25,52 +25,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<script>
-window.addEventListener("load", () => {
-    console.group("=== GISCUS DEBUG ===");
-
-    console.log("URL:", location.href);
-    console.log("Protocol:", location.protocol);
-    console.log("Host:", location.host);
-
-    const giscus = document.querySelector(".giscus");
-    const frame = document.querySelector(".giscus-frame");
-
-    console.log("Container:", giscus);
-    console.log("Frame:", frame);
-
-    if (!frame) {
-        console.error("❌ Giscus iframe не создан.");
-        console.groupEnd();
-        return;
-    }
-
-    console.log("Frame src:", frame.src);
-    console.log("Frame size:", frame.getBoundingClientRect());
-    console.log("Frame display:", getComputedStyle(frame).display);
-    console.log("Frame visibility:", getComputedStyle(frame).visibility);
-    console.log("Frame opacity:", getComputedStyle(frame).opacity);
-
-    frame.addEventListener("load", () => {
-        console.log("✅ iframe загрузился");
-
-        try {
-            console.log("iframe url:", frame.contentWindow.location.href);
-        } catch (e) {
-            console.warn("Cross-Origin — внутрь iframe залезть нельзя (это нормально).");
-        }
-    });
-
-    window.addEventListener("message", e => {
-        if (e.origin.includes("giscus")) {
-            console.log("📨 Message from Giscus:", e.data);
-        }
-    });
-
-    console.groupEnd();
-});
-</script>
-
 <body>
   <div class="grain" aria-hidden="true"></div>
 
@@ -85,8 +39,8 @@ window.addEventListener("load", () => {
 
       <div class="mobile-quote">
         <blockquote style="text-align:center">
-         — Ты что, смотришь порно в метро?<br>
-         — Не переживай, оно ведь детское.
+          — Ты что, смотришь порно в метро?<br>
+          — Не переживай, оно ведь детское.
         </blockquote>
 
         <p style="font-size:1em;text-align:center">
