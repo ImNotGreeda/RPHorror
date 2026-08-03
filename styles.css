@@ -507,7 +507,7 @@ nav a:hover {
 #article {
     position: relative;
     padding: clamp(72px, 8vw, 132px) max(6vw, 24px) clamp(96px, 10vw, 160px);
-    overflow: hidden;
+    /* overflow: hidden; */
     border-top: 1px solid var(--border);
     background:
         radial-gradient(circle at 82% 8%, rgba(112, 55, 159, .18), transparent 30%),
@@ -515,7 +515,7 @@ nav a:hover {
         var(--surface);
     color: #c3bac9;
     font: 500 16px/1.85 var(--font-text);
-    overflow-wrap: anywhere;
+    /* overflow-wrap: anywhere; */
 }
 
 #article::before {
@@ -1114,34 +1114,33 @@ footer {
 
 }
 
-.giscus-comments {
-    width: min(100% - 48px, 960px);
-    min-height: 300px;
-    margin: 0 auto;
-    padding: 60px 0 100px;
+.comments-section iframe {
+    width: 100%;
+    border: 0;
 }
 
-/* Комментарии Giscus */
-.giscus {
-    width: min(100% - 48px, 960px);
-    margin: 0 auto;
-    padding: 60px 0 100px;
+/* Cusdis: минимальная высота после применения hack.css */
+.comments-section {
+    height: auto;
+    overflow: visible;
 }
 
-.giscus-frame {
-    display: block !important;
+#cusdis_thread {
+    height: auto;
+    overflow: visible;
+}
+
+#cusdis_thread iframe {
+    display: block;
     width: 100% !important;
-    min-height: 320px !important;
-    border: 0 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
+    min-height: 500px !important;
+    border: 0;
 }
 
-.giscus,
-.giscus-frame {
-    width: 100% !important;
+section.comments-section {
+    mix-blend-mode: color-dodge;
 }
 
-.giscus-frame {
-    min-height: 700px !important;
+.comments-section h2 {
+    color: white;
 }

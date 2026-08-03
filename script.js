@@ -24,3 +24,5 @@ fadeTargets.forEach(target => {
 });
 
 document.head.insertAdjacentHTML('beforeend', '<style>.shown{opacity:1!important;transform:none!important}</style>');
+
+Cusdis?.setTheme?.("dark");
