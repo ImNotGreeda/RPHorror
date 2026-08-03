@@ -1113,3 +1113,10 @@ footer {
     }
 
 }
+
+.giscus-comments {
+    width: min(100% - 48px, 960px);
+    min-height: 300px;
+    margin: 0 auto;
+    padding: 60px 0 100px;
+}
