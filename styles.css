@@ -1120,3 +1120,19 @@ footer {
     margin: 0 auto;
     padding: 60px 0 100px;
 }
+
+/* Комментарии Giscus */
+.giscus {
+    width: min(100% - 48px, 960px);
+    margin: 0 auto;
+    padding: 60px 0 100px;
+}
+
+.giscus-frame {
+    display: block !important;
+    width: 100% !important;
+    min-height: 320px !important;
+    border: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
