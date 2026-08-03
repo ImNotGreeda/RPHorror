@@ -1136,3 +1136,12 @@ footer {
     opacity: 1 !important;
     visibility: visible !important;
 }
+
+.giscus,
+.giscus-frame {
+    width: 100% !important;
+}
+
+.giscus-frame {
+    min-height: 700px !important;
+}
