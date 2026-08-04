@@ -9,7 +9,7 @@ window.addEventListener('pointermove', ({ clientX, clientY }) => {
   character.style.transform = window.innerWidth >= 1440 ? 'none' : `translate(${x}px, ${y}px)`;
 });
 
-const fadeTargets = document.querySelectorAll('.news article, .cta > *:not(.sigil)');
+const fadeTargets = document.querySelectorAll('.articles-list .article-card, .archive-list .article-card, #article, .cta > *:not(.sigil)');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('shown');
